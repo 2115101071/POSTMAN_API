@@ -61,34 +61,7 @@
                 <a href="/create" class="btn btn-success text-white">+ New Data</a>
                 <a href="/exportpdf" class="btn btn-info text-black">Export PDF</a>
                 <a href="/exportexcel" class="btn btn-danger text-white">Export Excel</a>
-               <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Import Data
-                </button>
-                
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <form action="#" method="POST" enctype="multipart/form-data">
-                            @csrf
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <input type="File" name="file" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div> 
-                    </form>
-                    </div>
-                </div>
+                <a href="/insertfile" class="btn btn-primary text-white">Import Data</a>
 
                 <form action="/home" method="GET" class="flex items-center">   
                     <label for="simple-search" class="sr-only">Search</label>
@@ -121,6 +94,9 @@
                     Jenis Kelamin
                 </th>
                 <th scope="col" class="px-6 py-3">
+                    Semester
+                </th>
+                <th scope="col" class="px-6 py-3">
                     Status
                 </th>
                 <th scope="col" class="px-6 py-3">
@@ -148,6 +124,9 @@
                 </td>
                 <td class="px-6 py-4">
                     {{$row->jenis_kelamin}}
+                </td>
+                <td class="px-6 py-4">
+                    {{$row->semester}}
                 </td>
                 <td class="px-6 py-4">
                     {{$row->status}}

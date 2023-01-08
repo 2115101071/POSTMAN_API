@@ -33,6 +33,8 @@ Route::get('/exportpdf', [MahasiswaController::class, 'exportpdf'])->name('expor
 // export excel
 Route::get('/exportexcel', [MahasiswaController::class, 'exportexcel'])->name('exportexcel');  
 
+Route::get('/insertfile', [MahasiswaController::class, 'insertfile'])->name('insertfile'); 
+Route::post('/importexcel', [MahasiswaController::class, 'importexcel'])->name('importexcel'); 
 
 
 
