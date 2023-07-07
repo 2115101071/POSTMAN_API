@@ -21,7 +21,7 @@ Route::get('/', [MahasiswaController::class, 'index'])->name('home');
 Route::get('/create', [MahasiswaController::class, 'create'])->name('tambahdata');  
 Route::post('/insertdata', [MahasiswaController::class, 'insertdata'])->name('insertdata');  
 
-Route::get('/tampilkandata/{id}', [MahasiswaController::class, 'tampilkandata'])->name('tampilkandata');  
+Route::get('/edit/{id}', [MahasiswaController::class, 'tampilkandata'])->name('edit');  
 Route::post('/updatedata/{id}', [MahasiswaController::class, 'updatedata'])->name('updatedata');  
 
 Route::get('/delete/{id}', [MahasiswaController::class, 'delete'])->name('delete');  
@@ -33,6 +33,7 @@ Route::get('/exportpdf', [MahasiswaController::class, 'exportpdf'])->name('expor
 // export excel
 Route::get('/exportexcel', [MahasiswaController::class, 'exportexcel'])->name('exportexcel');  
 
+// import excel
 Route::get('/insertfile', [MahasiswaController::class, 'insertfile'])->name('insertfile'); 
 Route::post('/importexcel', [MahasiswaController::class, 'importexcel'])->name('importexcel'); 
 
